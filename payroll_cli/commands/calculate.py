@@ -14,7 +14,6 @@ def run(employee_id: str, hours: float) -> int:
     """
     try:
         validate_employee_id(employee_id)
-        validate_hours(hours)
         gross = compute_gross(hours)
         net = compute_net(gross, TAX_RATE)
         print(f"gross={format_currency(gross)} net={format_currency(net)} employee={employee_id}")
